@@ -41,6 +41,11 @@ body {
   flex-grow: 1;
 }
 
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+
 #contactBtn1 {
   font-family: 'Russo One';
   
@@ -76,9 +81,9 @@ header {
 }
 
 .heroImgRight {
-  width: 57.375rem;
+  width:57.5vw;
   height: 64rem;
-  border: 1px solid black;
+  
 
 }
 
@@ -90,22 +95,24 @@ header {
   width: 100vw;
 }
 
+/* This style is being overwritten because:
+   1. It's likely that there are media queries or other more specific selectors 
+      targeting #doorAfterImg later in the CSS file.
+   2. There might be inline styles applied directly to the element in the HTML.
+   3. JavaScript could be dynamically changing the style of this element.
+   4. If using a CSS framework, it might have styles that take precedence over this.
+
+   To prevent overwriting, consider:
+   - Using more specific selectors (e.g., .heroImgRight #doorAfterImg)
+   - Using !important (sparingly) if necessary
+   - Reviewing and reorganizing your CSS to ensure cascading works as intended
+   - Checking for any inline styles or JavaScript that might be affecting this element
+*/
 
 
 
-.heroImgLeft {
-  width: 33.9375rem;
-  height: 26.75rem;
- 
- 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: 20rem;
-  left: 15rem;
 
-}
+
 
 
 
@@ -155,37 +162,32 @@ header {
   transition: all 0.3s ease;
 }
 
-.contactButton:hover {
-  background-color: #ffffff;
-  color: #000000;
-  transform: scale(1.05);
-  cursor: pointer;
-}
+
 
 #contactInfo {
   position: absolute;
-  height: 600px;
-  width:300px;
+  height: 200px;
+  width: 420px;
   z-index: 2;
-  top: 15rem;
-  right: 7.5rem;
-  background: rgba(173, 168, 168, 0.2);
+  top:15rem;
+  right: 3rem;
+  background: rgba(173, 168, 168, 0);
   border-radius: 10px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(219, 129, 10, 0.747);
+  
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #contactInfo .h4Contact{
-  font-family: 'Russo One';
-  color: #eb6222;
-  font-size: 2rem;
-  text-align: center;
+  font-family: 'Familjen Grotesk';
+  color: #d3d3d3;
+  font-size: 1.8rem;
+  text-align: start;
   display: flex;
-  justify-content: center;
-  align-items: center;
-
+  justify-content:start;
+  align-items: start;
+  padding-left: 1rem;
 }
 
 .section{
@@ -218,7 +220,7 @@ header {
   padding-left: 20rem;
   padding-top: 1rem;
   -webkit-text-stroke: 1px #000000; /* For webkit browsers */
-  text-stroke: 1px #000000; /* Standard property */
+   /* Standard property */
 }
 
 .h2 {
@@ -330,10 +332,13 @@ header {
 
 #servicesLeftDiv .h4 {
   padding-left: 5rem;
+  
 }
 
 #servicesLeftDiv .h2 {
   padding-left: 5rem;
+  width: 80%;
+  padding-bottom: 3.75rem;
 }
 
 #servicesLeftDiv #servicesImg {
@@ -445,6 +450,7 @@ header {
   overflow: hidden;
 }
 
+/*
 #projectsSection .projectsImgWrap::before {
   content: '';
   position: absolute;
@@ -452,10 +458,11 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  background-color: rgba(0, 0, 0, 0.5); 
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
+*/
 
 #projectsSection .projectsImgWrap:hover::before {
   opacity: 1;
@@ -622,6 +629,11 @@ header {
   top: 0rem;
 }
 
+#canvas1{
+  position: absolute;
+  right: 5rem;
+}
+
 #footerSection{
   width: 100vw;
   height: 30rem;
@@ -630,3 +642,423 @@ header {
   top: 329rem; 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries for phone screens */
+@media screen and (max-width: 520px) {
+  /* Reset and basic layout */
+  body, html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Navigation */
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navList {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .nav ul {
+    padding-top: 0;
+    padding-bottom: 5rem;
+  }
+
+  .nav, .nav ul, .navList {
+    position: static;
+  }
+
+  #colesLogo {
+    width: 100%;
+    max-width: 300px;
+    padding-right: 3rem;
+  }
+
+  .nav ul {
+    position: relative;
+    z-index: 0;
+    padding-top: 70px; /* Adjust based on logo height */
+  }
+
+  /* Header */
+  header {
+    padding: 1rem;
+  }
+
+  .heroImgRight, #doorAfterImg {
+    max-width: 75vw;
+    max-height: 300px;
+    object-fit: contain;
+    position: absolute;
+    left: 50%;
+  }
+
+  .h1 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+  }
+
+  #heroP {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+
+  .contactButton {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+
+  #contactButton2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  /* Sections */
+  #aboutSection, #servicesSection, #contactUsSection, #footerSection {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .h2, .h4 {
+    width: 100vw;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .paratype1, .paratype2 {
+    width: 80vw;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 1rem auto;
+    text-align: left;
+    padding: 1rem;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  #servicesSection #servicesLeftDiv .h2,
+  #servicesSection #servicesLeftDiv .h4 {
+    width: 100vw;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  #servicesSection .serviceCard {
+    display: flex;
+    padding-left: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(15, 15, 15, 0.575);
+  }
+
+  #servicesSection .serviceCard .paratype2 {
+    text-align: left;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  #servicesSection .paratype1 {
+    width: 80vw;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 1rem 4rem;
+    text-align: left;
+    padding: 1rem;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  #servicesRightDiv {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  #servicesRightDiv .serviceCard {
+    padding: 0;
+    margin: 2rem 5rem;
+  }
+
+  #aboutImg, #servicesImg, #contactImg {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    object-fit: cover;
+  }
+
+  #contactInfo, #canvas1 {
+    width: 100%;
+    margin: auto auto;
+    padding: auto;
+  }
+
+  /* Footer */
+  #footerSection {
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  #contactUsSection h4 {
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-45%);
+    width: 100%;
+  }
+
+  #contactLeftDiv #contactLeftDiv2 .paratype2 {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  #contactForm {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  #contactForm input,
+  #contactForm textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-family: "Familjen Grotesk", sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #contactForm input:focus,
+  #contactForm textarea:focus {
+    outline: none;
+    border-color: #524f4d;
+    box-shadow: 0 0 0 2px rgba(82, 79, 77, 0.2);
+  }
+
+  #contactForm textarea {
+    height: 150px;
+    resize: vertical;
+    width: 400px
+  }
+
+  #contactForm input::placeholder,
+  #contactForm textarea::placeholder {
+    color: #999;
+  }
+
+  #contactForm label {
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+  }
+
+  #contactForm button {
+    background-color: #524f4d;
+    color: #D9D9D9;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #contactForm button:hover {
+    background-color: #3a3836;
+  }
+
+  @media (max-width: 768px) {
+    #contactImg {
+      display: none;
+    }
+  }
+
+  .footer-content {
+    max-width: 90vw;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+ 
+
+ 
+  #footerLogo {
+    max-width: 250px;
+    height: auto;
+    width: 90%;
+    max-height: 100px;
+    
+  }
+
+  /* Override any conflicting styles */
+  #footerLogo:not(#\9) {
+    width: 250px !important;
+    height: auto !important;
+    max-height: 100px !important;
+  }
+
+  /* Ensure the parent container allows resizing */
+  .footer-logo {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .footer-content .footer-contact,
+  .footer-content .footer-links {
+    flex: 1 1 200px;
+    margin-bottom: 1rem;
+  }
+
+  .footer-content p,
+  .footer-content a {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  #contactInfo .h4Contact {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Remove all absolute positioning */
+  * {
+    position: static !important;
+  }
+
+  /* Remove all fixed widths and heights */
+  * {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .section {
+    width: 100%;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+  }
+
+  #aboutSection, #servicesSection, #contactUsSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #aboutBG, #servicesLeftDiv, #servicesRightDiv, #contactLeftDiv, #contactRightImgWrap {
+    width: 100%;
+    position: relative;
+  }
+
+  #aboutImgText {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+  }
+
+  header *:hover,
+  .heroImgRight:hover,
+  .heroImgLeft:hover,
+  #doorAfterImg:hover,
+  .h1:hover,
+  #heroP:hover,
+  .contactButton:hover {
+    color: inherit !important;
+    background-color: inherit !important;
+    transform: none !important;
+    opacity: 1 !important;
+    cursor: default !important;
+  }
+
+  header *,
+  .heroImgRight,
+  .heroImgLeft,
+  #doorAfterImg,
+  .h1,
+  #heroP,
+  .contactButton {
+    transition: none !important;
+  }
+}
+
+@media screen and (min-width: 521px) {
+  /* Styles for larger screens */
+}
