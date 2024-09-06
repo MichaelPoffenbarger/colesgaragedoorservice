@@ -44,6 +44,7 @@
     "priceRange": "$$"
   }
   </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <nav class="nav">
@@ -67,6 +68,12 @@
       <div id="contactInfo">
         <h4 class="h4Contact">(469) 245-9943</h4>
         <h4 class="h4Contact">colesgaragedoor1@gmail.com</h4>
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+          <a href="https://www.facebook.com/profile.php?id=61563945673840" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem;"><i class="fab fa-facebook-f"></i></a>
+          <a href="#fab fa-instagram" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem;"><i class="fab fa-instagram"></i></a>
+          <a href="fab fa-xing" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem;"><i class="fab fa-xing"></i></a>
+          <a href="fab fa-linkedin" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem;"><i class="fab fa-linkedin"></i></a>
+        </div>
       </div>
     </header>
   </section>
@@ -119,12 +126,34 @@
     </div>
     <div id="contactRightImgWrap">
       <form id="contactForm">
-        <input id="input1" type="text" id="name" name="name" placeholder="Your Name" required>
-        <input id="input2" type="email" id="email" name="email" placeholder="Your Email" required>
-        <textarea id="textarea" id="message" name="message" placeholder="Your Message" required></textarea>
+        <input id="input1" type="text" id="name" name="name" placeholder="Your Name" required style="font-family: Familjen Grotesk; font-size: 1.1rem;">
+        <input id="input2" type="email" id="email" name="email" placeholder="Your Email" required style="font-family: Familjen Grotesk; font-size: 1.1rem;">
+        <textarea id="textarea" id="message" name="message" placeholder="Your Message" required style="font-family: Familjen Grotesk; font-size: 1.1rem;"></textarea>
+        <div id="radioGroup" style="background-color: #eb7813c; border-radius: 10px; padding: 20px; margin-bottom: 25px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: absolute;
+        top: 27rem; left:2rem;">
+          <p style="font-weight: bold; margin-bottom: 15px; color: #333; font-family: Familjen Grotesk;">How did you hear about us?</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <label style="display: flex; align-items: center; cursor: pointer; padding: 8px 15px; background-color: #fff; border-radius: 20px; transition: all 0.3s ease;">
+              <input type="radio" name="hearAboutUs" value="search" required style="margin: 8px 15px; appearance: none; width: 18px; height: 18px; border: 2px solid #eb7813; border-radius: 50%; outline: none; transition: all 0.3s ease;">
+              <span style="position: relative; font-family: Familjen Grotesk;">Search Engine</span>
+            </label>
+            <label style="display: flex; align-items: center; cursor: pointer; padding: 8px 15px; background-color: #fff; border-radius: 20px; transition: all 0.3s ease;">
+              <input type="radio" name="hearAboutUs" value="social" style="margin: 8px 15px; appearance: none; width: 18px; height: 18px; border: 2px solid #eb7813; border-radius: 50%; outline: none; transition: all 0.3s ease;">
+              <span style="position: relative; font-family: Familjen Grotesk;">Social Media</span>
+            </label>
+            <label style="display: flex; align-items: center; cursor: pointer; padding: 8px 15px; background-color: #fff; border-radius: 20px; transition: all 0.3s ease;">
+              <input type="radio" name="hearAboutUs" value="referral" style="margin: 8px 15px; appearance: none; width: 18px; height: 18px; border: 2px solid #eb7813; border-radius: 50%; outline: none; transition: all 0.3s ease;">
+              <span style="position: relative; font-family: Familjen Grotesk;">Referral</span>
+            </label>
+            <label style="display: flex; align-items: center; cursor: pointer; padding: 8px 15px; background-color: #fff; border-radius: 20px; transition: all 0.3s ease;">
+              <input type="radio" name="hearAboutUs" value="other" style="margin: 8px 15px; appearance: none; width: 18px; height: 18px; border: 2px solid #eb7813; border-radius: 50%; outline: none; transition: all 0.3s ease;">
+              <span style="position: relative; font-family: Familjen Grotesk;">Other</span>
+            </label>
+          </div>
+        </div>
         <button id="btnForm" type="submit">Send</button>
       </form>
-      <img src="img/doorafterxparent.png" id="contactImg">
+      
     </div>
   </section>
   <section class="section" id="footerSection">
@@ -152,9 +181,10 @@
         </div>
         <div class="footer-social" style="flex: 1 1 200px; margin-bottom: 1rem;">
           <h3 style="color: #eb7813; font-family: 'Russo One', sans-serif; margin-bottom: 0.5rem; font-size: 1.3rem;">Follow Us</h3>
-          <a href="#" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem; margin-right: 1rem;"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem; margin-right: 1rem;"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem;"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61563945673840" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem; margin-right: 1rem;"><i class="fab fa-facebook-f"></i></a>
+          <a href="#fab fa-instagram" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem; margin-right: 1rem;"><i class="fab fa-instagram"></i></a>
+          <a href="fab fa-xing" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem;"><i class="fab fa-xing"></i></a>
+          <a href="fab fa-linkedin" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem;"><i class="fab fa-linkedin"></i></a>
         </div>
         <canvas id="canvas1"></canvas>
       </div>
