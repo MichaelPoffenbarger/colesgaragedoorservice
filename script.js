@@ -1,8 +1,8 @@
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 
-const width = 250;
-const height = 250;
+const width = 200;
+const height = 120;
 canvas.width = width;
 canvas.height = height;
 
@@ -105,11 +105,10 @@ function animate(currentTime) {
   }
 
   // Draw obstacle border
-  ctx.strokeStyle = obstacle.borderColor;
-  ctx.lineWidth = obstacle.borderWidth;
-  ctx.beginPath();
-  ctx.arc(obstacle.x, obstacle.y, obstacle.radius, 0, Math.PI * 2);
-  ctx.stroke();
+  
+  
+  
+  
 
   frameCount++;
   requestAnimationFrame(animate);
@@ -327,7 +326,7 @@ function onMouseMove(event) {
 }
 
 function createTopLeftParticles() {
-  for (let i = 0; i < 3100; i++) {
+  for (let i = 0; i < 1400; i++) {
     particles.push(new Particle(Math.random() * 200, Math.random() * 200)); // Random position within 50x50 pixels in top left
   }
   console.log(`Added 5000 particles. New count: ${particles.length}`);
@@ -338,3 +337,34 @@ let lastParticleAddTime = 0;
 
 setup();
 requestAnimationFrame(animate);
+
+
+// Sticky Navbar Script
+const navbar = document.querySelector('.nav');
+const navbarOffset = navbar.offsetTop;
+
+function stickyNavbar() {
+    if (window.pageYOffset >= navbarOffset) {
+        navbar.classList.add('sticky');
+    } else {
+        navbar.classList.remove('sticky');
+    }
+}
+
+window.onscroll = function() {
+    stickyNavbar();
+};
+
+// Add some basic styles for the sticky navbar
+const style = document.createElement('style');
+style.textContent = `
+    .nav.sticky {
+        position: fixed;d
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #4742426c; /* Adjust as needed */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a shadow when sticky */
+    }
+`;
+document.head.appendChild(style);
