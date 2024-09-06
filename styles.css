@@ -172,7 +172,7 @@ header {
 
 #contactInfo {
   position: absolute;
-  height: 200px;
+  height: 250px;
   width: 420px;
   z-index: 2;
   top:38rem;
@@ -189,11 +189,11 @@ header {
   font-family: 'Familjen Grotesk';
   color: #d3d3d3;
   font-size: 1.8rem;
-  text-align: start;
+  text-align: center;
   display: flex;
-  justify-content:start;
+  justify-content:center;
   align-items: start;
-  padding-left: 1rem;
+  padding: auto;
 }
 
 .section{
@@ -604,7 +604,7 @@ header {
 #btnForm {
   font-family: 'Russo One';
   position: absolute;
-  top: 30rem;
+  top: 38rem;
   z-index: 2;
   left: 38%;
   height: 3.5rem;
@@ -628,26 +628,25 @@ header {
 
 #contactUsSection #contactRightImgWrap{
   width: 45rem;
-  height: 37rem;
-  background: #fff;
+  height:45rem;
+  background: radial-gradient(circle, #a09f9f 0%, #eb7813 100%);
   position: absolute;
-  top: 5rem;
+  top: 3rem;
   right: 15rem;
   z-index: 1;
 }
 
-#contactImg{
-  width: 45rem;
-  height: 37rem;
-  background: #fff;
-  position: absolute;
-  z-index: 1;
-  top: 0rem;
+#contactForm{
+  display: flex;
+  flex-direction: column;
 }
+
+
 
 #canvas1{
   position: absolute;
-  right: 5rem;
+  left: 19rem;
+  top: 10rem
 }
 
 #footerSection{
@@ -658,7 +657,16 @@ header {
   top: 329rem; 
 }
 
+.footer-social .social-icon{
+  font-size: 2.4rem;
+  color: #D9D9D9;
+  margin-right: 1.5rem;
+  transition: color 0.3s ease;
+}
 
+.footer-social .social-icon:hover {
+  color: #ffffff;
+}
 
 
 
@@ -910,6 +918,8 @@ header {
     margin-bottom: 1rem;
   }
 
+ 
+
   #contactForm {
     width: 100%;
     max-width: 600px;
@@ -920,7 +930,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f8f8f8;
+    background: radial-gradient(circle, #a09f9f 0%, #eb7813 100%);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
