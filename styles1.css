@@ -3,6 +3,7 @@
     body {
         background-color: #1a1a1a;
         color: #ffffff;
+        overflow-x: hidden;
     }
 
     img {
@@ -38,7 +39,7 @@
     
     .nav {
         width: 100%;
-        border: 1px white solid;
+        
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -69,6 +70,8 @@
         align-items: center;
         justify-content: center;
         margin: 0;
+        font-family: 'Familjen Grotesk';
+        font-size: 1.6rem;
     }
     
     #colesLogo {
@@ -100,22 +103,86 @@
     }
     
     .h1 {
-        font-size: 2rem;
+        font-size: 7rem;
         margin-bottom: 0.5rem;
+        font-family: 'Russo One';
+        color: #FF8533;
+        
     }
     
     #heroP {
         font-size: 1rem;
         margin-bottom: 1rem;
+        font-family: 'Familjen Grotesk';
+        font-size: 1.6rem;
     }
     
     .cta-button {
-        padding: 0.5rem 1rem;
+        padding: 0.75rem 1.5rem;
         font-size: 1rem;
+        background-color: #FF6600; /* Orange color matching the logo */
+        color: #000000;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+    }
+
+    .cta-button:hover {
+        background-color: #FF8533; /* Lighter orange for hover state */
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .cta-button:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
     
     .contact-info {
         margin-top: 1rem;
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    h2 {
+        font-family: 'Russo One';
+        font-size: 4rem;
+        text-align: center;
+        color: #FF8533;
+    }
+
+    h3 {
+        font-family: 'familjen grotesk';
+        font-size: 3rem;
+        text-align: center;
+        color: #fff;
+    }
+
+    #aboutP {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        color: #fff;
+        margin: 4rem 4rem;
+    }
+
+    #ownerP {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        color: #fff;
+        margin: 1rem 4rem;
     }
     
     .services-grid, .project-grid {
@@ -124,11 +191,114 @@
     
     .service-card, .project-card {
         margin-bottom: 1rem;
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transition: all 0.3s ease;
+    }
+
+    .service-card:hover, .project-card:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+    }
+
+    #quoteP {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
     }
     
-    #contactForm {
-        padding: 0 1rem;
+    cite {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin-top: 0.5rem;
     }
+
+    #contactP {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    #contactForm {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+        font-family: 'Familjen Grotesk', sans-serif;
+    }
+
+    #contactForm textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    #contactForm button {
+        width: 100%;
+        padding: 1rem;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    #contactForm button:hover {
+        background-color: #45a049;
+    }
+
+    #contactForm fieldset {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #contactForm legend {
+        padding: 0 0.5rem;
+        color: #ffffff;
+    }
+
+    #contactForm label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+    }
+
+    #contactForm input[type="radio"] {
+        margin-right: 0.5rem;
+        width: auto;
+    }
+
+    
+
+    
     
     .footer-content {
         flex-direction: column;
@@ -139,6 +309,36 @@
         margin-bottom: 1rem;
         text-align: center;
     }
+
+    .footerP {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    #footerUl {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footerLi {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .footerA {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        text-decoration: none;
+        color: inherit;
+    }
 }
   
 /* Tablet layout (min-width: 768px and max-width: 1023px) */
@@ -147,6 +347,7 @@
     body {
         background-color: #1a1a1a;
         color: #ffffff;
+        overflow-x: hidden;
     }
 
     img {
@@ -181,25 +382,46 @@
     }
     
     .nav {
+        width: 100%;
+        
+        display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         padding: 1rem;
     }
     
     .nav ul {
+        display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: space-around;
         padding: 0;
+        margin: 0;
+        width: 100%;
     }
     
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
     .nav-list li {
-        margin: 0 0.5rem;
+        width: auto;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        font-family: 'Familjen Grotesk';
+        font-size: 1.6rem;
     }
     
     #colesLogo {
         max-width: 150px;
         margin-bottom: 0;
+        margin-right: 2rem;
     }
     
     .menu-toggle {
@@ -225,22 +447,86 @@
     }
     
     .h1 {
-        font-size: 2rem;
+        font-size: 7rem;
         margin-bottom: 0.5rem;
+        font-family: 'Russo One';
+        color: #FF8533;
+        
     }
     
     #heroP {
         font-size: 1rem;
         margin-bottom: 1rem;
+        font-family: 'Familjen Grotesk';
+        font-size: 1.6rem;
     }
     
     .cta-button {
-        padding: 0.5rem 1rem;
+        padding: 0.75rem 1.5rem;
         font-size: 1rem;
+        background-color: #FF6600; /* Orange color matching the logo */
+        color: #000000;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+    }
+
+    .cta-button:hover {
+        background-color: #FF8533; /* Lighter orange for hover state */
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .cta-button:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
     
     .contact-info {
         margin-top: 1rem;
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    h2 {
+        font-family: 'Russo One';
+        font-size: 4rem;
+        text-align: center;
+        color: #FF8533;
+    }
+
+    h3 {
+        font-family: 'familjen grotesk';
+        font-size: 3rem;
+        text-align: center;
+        color: #fff;
+    }
+
+    #aboutP {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        color: #fff;
+        margin: 4rem 4rem;
+    }
+
+    #ownerP {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        color: #fff;
+        margin: 1rem 4rem;
     }
     
     .services-grid, .project-grid {
@@ -249,11 +535,114 @@
     
     .service-card, .project-card {
         margin-bottom: 1rem;
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transition: all 0.3s ease;
+    }
+
+    .service-card:hover, .project-card:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+    }
+
+    #quoteP {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
     }
     
-    #contactForm {
-        padding: 0 1rem;
+    cite {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin-top: 0.5rem;
     }
+
+    #contactP {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    #contactForm {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+        font-family: 'Familjen Grotesk', sans-serif;
+    }
+
+    #contactForm textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    #contactForm button {
+        width: 100%;
+        padding: 1rem;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    #contactForm button:hover {
+        background-color: #45a049;
+    }
+
+    #contactForm fieldset {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #contactForm legend {
+        padding: 0 0.5rem;
+        color: #ffffff;
+    }
+
+    #contactForm label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+    }
+
+    #contactForm input[type="radio"] {
+        margin-right: 0.5rem;
+        width: auto;
+    }
+
+    
+
+    
     
     .footer-content {
         flex-direction: column;
@@ -264,6 +653,36 @@
         margin-bottom: 1rem;
         text-align: center;
     }
+
+    .footerP {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    #footerUl {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footerLi {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .footerA {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        text-decoration: none;
+        color: inherit;
+    }
 }
   
 /* Mobile layout (max-width: 767px) */
@@ -272,6 +691,7 @@
     body {
         background-color: #1a1a1a;
         color: #ffffff;
+        overflow-x: hidden;
     }
 
     img {
@@ -281,12 +701,12 @@
         display: block;
         margin: 0 auto;
     }
-
+    
     #colesLogo {
         width: auto;
         max-width: 150px;
     }
-
+    
     .hero-image img,
     .about-image img,
     .service-card img,
@@ -295,7 +715,7 @@
         max-width: 100%;
         height: auto;
     }
-
+    
     .footer-logo img {
         width: auto;
         max-width: 100%;
@@ -307,7 +727,7 @@
 
     .nav {
         width: 100%;
-        border: 1px white solid;
+        
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -331,6 +751,8 @@
         transition: .3s ease;
         z-index: 1000; /* Ensure it's above other elements */
     }
+
+    
 
     .off-screen-menu.active {
         right: 2rem;
@@ -384,65 +806,272 @@
         margin-top: 1rem;
     }
 
-    
-
     #homeSection {
         flex-direction: column;
         padding: 1rem;
     }
-
+    
     .hero-content, .hero-image {
         width: 100%;
         text-align: center;
     }
-
+    
     .hero-image {
         margin-top: 1rem;
     }
-
+    
     #doorAfterImg {
         max-width: 100%;
     }
-
+    
     .h1 {
-        font-size: 2rem;
+        font-size: 4rem;
         margin-bottom: 0.5rem;
+        font-family: 'Russo One';
+        color: #FF8533;
+        
     }
-
+    
     #heroP {
         font-size: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2.5rem;
+        font-family: 'Familjen Grotesk';
+        font-size: 1.3rem;
     }
-
+    
     .cta-button {
-        padding: 0.5rem 1rem;
+        padding: 0.75rem 1.5rem;
         font-size: 1rem;
+        background-color: #FF6600; /* Orange color matching the logo */
+        color: #000000;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
     }
 
+    .cta-button:hover {
+        background-color: #FF8533; /* Lighter orange for hover state */
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .cta-button:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
     .contact-info {
         margin-top: 1rem;
+        font-family: 'familjen grotesk';
+        font-size: 1.3rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
+    h2 {
+        font-family: 'Russo One';
+        font-size: 2.4rem;
+        text-align: center;
+        color: #FF8533;
+    }
+
+    h3 {
+        font-family: 'familjen grotesk';
+        font-size: 2.2rem;
+        text-align: center;
+        color: #fff;
+    }
+
+    #aboutP {
+        font-family: 'familjen grotesk';
+        font-size: 1.3rem;
+        text-align: center;
+        color: #fff;
+        margin: 4rem 1rem;
+    }
+
+    #ownerP {
+        font-family: 'familjen grotesk';
+        font-size: 1.3rem;
+        text-align: center;
+        color: #fff;
+        margin: 1rem 4rem;
+    }
+
+    #serviceImg {
+        margin-bottom: 2rem;
+        margin-left: 1.75rem;
+    }
+    
     .services-grid, .project-grid {
         grid-template-columns: 1fr;
+        margin-left: 1rem;
     }
-
+    
     .service-card, .project-card {
         margin-bottom: 1rem;
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 20px;
+        
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transition: all 0.3s ease;
+    }
+
+    .service-card:hover, .project-card:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+    }
+
+    #quoteP {
+        font-family: 'familjen grotesk';
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    
+    cite {
+        font-family: 'familjen grotesk';
+        font-size: 1.3rem;
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin-top: 0.5rem;
+    }
+
+    #contactP {
+        font-family: 'familjen grotesk';
+        font-size: 1.3rem;
+        text-align: center;
     }
 
     #contactForm {
-        padding: 0 1rem;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
+    #contactForm input,
+    #contactForm textarea {
+        width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+        font-family: 'Familjen Grotesk', sans-serif;
+    }
+
+    #contactForm textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    #contactForm button {
+        width: 100%;
+        padding: 1rem;
+        background-color: #FF8533;
+        color: black;
+
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1.3rem;
+        font-family: 'familjen grotesk';
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    #contactForm button:hover {
+        background-color: #f1904f;
+    }
+
+    #contactForm fieldset {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #contactForm legend {
+        padding: 0 0.5rem;
+        color: #ffffff;
+    }
+
+    #contactForm label {
+        display: flex;
+        font-family: 'familjen grotesk';
+        font-size: 1.3rem;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        color: #ffffff;
+    }
+
+    #contactForm input[type="radio"] {
+        margin-right: 0.5rem;
+        width: auto;
+    }
+
+    
+
+    
+    
     .footer-content {
         flex-direction: column;
         align-items: center;
     }
-
+    
     .footer-logo, .footer-contact, .footer-links, .footer-social {
         margin-bottom: 1rem;
         text-align: center;
+    }
+
+    .footerP {
+        font-family: 'familjen grotesk';
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    #footerUl {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footerLi {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .footerA {
+        font-family: 'familjen grotesk';
+        font-size: 1.6rem;
+        text-align: center;
+        text-decoration: none;
+        color: inherit;
     }
 }
 

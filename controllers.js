@@ -29,4 +29,22 @@ $(document).ready(function() {
             $('.off-screen-menu .nav-list').show();
         }
     });
+
+    // Remove dots from links
+    $('.nav-list li').css('list-style-type', 'none');
 });
+
+
+// Hide off-screen menu for larger screens
+function handleOffScreenMenu() {
+    if ($(window).width() > 767) {
+        $('.off-screen-menu').removeClass('active').hide();
+        $('.off-screen-menu .nav-list').hide();
+    } else {
+        $('.off-screen-menu').show();
+    }
+}
+
+// Call the function on document ready and window resize
+$(document).ready(handleOffScreenMenu);
+$(window).resize(handleOffScreenMenu);
