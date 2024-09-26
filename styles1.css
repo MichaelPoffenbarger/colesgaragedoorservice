@@ -692,6 +692,8 @@
         background-color: #1a1a1a;
         color: #ffffff;
         overflow-x: hidden;
+        
+        
     }
 
     img {
@@ -908,10 +910,7 @@
         margin: 1rem 4rem;
     }
 
-    #serviceImg {
-        margin-bottom: 2rem;
-        margin-left: 1.75rem;
-    }
+   
     
     .services-grid, .project-grid {
         grid-template-columns: 1fr;
@@ -926,16 +925,86 @@
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
         border-radius: 10px;
-        padding: 20px;
+        height: 400px;
         
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 4px 6px rgba(190, 102, 0, 0.849);
+        border: 1px solid rgb(190, 86, 1);
         transition: all 0.3s ease;
     }
 
     .service-card:hover, .project-card:hover {
         background: rgba(255, 255, 255, 0.2);
         transform: translateY(-5px);
+    }
+
+   
+    .service-card h3 {
+        
+        font-family: 'familjen grotesk';
+        width: inherit;
+        margin-left: 0;
+        padding-left: 2rem;
+        text-align: left;
+        color: #ffffff;
+        backdrop-filter: blur(10px);
+        line-height: 1;
+        font-size: 1.8rem;
+        margin-top: 1rem;
+        background-color: rgba(31, 31, 31, 0.4);
+    }
+
+    .service-card p {
+        width:50%;
+        margin-left: 0;
+        padding-left: 2rem;
+        text-align: left;
+        color: #ffffff;
+        backdrop-filter: blur(10px);
+        line-height: 1;
+        font-size: 1.2rem;
+    }
+
+     #canvas1 {
+        position: relative;
+        top: -2rem;
+
+        z-index: 0; 
+        height: 50%;
+        width: 100%;
+    }
+    #canvas2 {
+        position: relative;
+        top: -2rem;
+
+        z-index: 0; 
+        height: 50%;
+        width: 100%;
+    }
+    .project-card h3 {
+        font-family: 'familjen grotesk';
+        width: inherit;
+        margin-left: 0;
+        padding-left: 2rem;
+        text-align: left;
+        color: #ffffff;
+        backdrop-filter: blur(10px);
+        line-height: 1;
+        font-size: 1.6rem;
+        margin-top: 8rem;
+        background-color: rgba(31, 31, 31, 0.4);
+    }
+
+    .project-card p {
+        width: 60%;
+        margin-left: 0;
+        padding-left: 2rem;
+        text-align: left;
+        color: #ffffff;
+        backdrop-filter: blur(10px);
+        line-height: 1;
+        font-size: 1.3rem;
+        margin-top:3rem;
+        background-color: rgba(31, 31, 31, 0.4);
     }
 
     #quoteP {
@@ -1088,3 +1157,5 @@ a:visited {
 a:hover, a:focus {
     text-decoration: underline;
 }
+
+
