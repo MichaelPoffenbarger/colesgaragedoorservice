@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cole's Garage Door Service - Fort Worth's premier garage door installation and repair. Fast, friendly, and cost-effective services for residential and commercial needs.">
+  <meta name="description" content="Cole's Garage Door Service offers fast, friendly, and cost-effective garage door installation and repair in Fort Worth. 24/7 emergency services for residential and commercial needs. Call (469) 245-9943 today!">
   <meta name="keywords" content="garage door, installation, repair, Fort Worth, residential, commercial, spring replacement, cable repair, garage door opener, emergency service, 24/7 service, garage door maintenance">
   <meta name="author" content="Cole's Garage Door Service">
   <meta name="robots" content="index, follow">
@@ -15,14 +17,12 @@
   <meta name="twitter:title" content="Cole's Garage Door Service | Fort Worth's Premier Garage Door Solutions">
   <meta name="twitter:description" content="Expert garage door installation, repair, and maintenance in Fort Worth. Fast, reliable, and affordable services for all your garage door needs.">
   <meta name="twitter:image" content="https://www.colesgaragedoor.com/img/logo.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles1.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Russo+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-  <title>Cole's Garage Door Service | Fort Worth's Premier Garage Door Installation & Repair | CGDS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Russo+One&display=swap" rel="stylesheet">
+  <title>Cole's Garage Door Service | Fort Worth's Premier Garage Door Installation & Repair</title>
   <link rel="canonical" href="https://www.colesgaragedoor.com">
   <script type="application/ld+json">
   {
@@ -46,155 +46,205 @@
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <nav class="nav">
-    <ul>
-    <a href="homeSection"><img src="img/colesaltlogo.png" alt="Coles Garage Door Logo" id="colesLogo"></a>
-      <li class="navList"><a href="#aboutSection">About</a></li>
-      <li class="navList"><a href="#servicesSection">Services</a></li>
-      <li class="navList"><a href="#projectsSection">Projects</a></li>
-      <li class="navList"><a href="#contactUsSection"><button class="contactBtn" id="contactBtn1">Contact</button></a></li>
-    </ul>
-  </nav>
-  <section class="section" id="homeSection">
-    <header>
-      <hero class="heroImgRight">
-        <img src="img/doorafter.jpeg" alt="Door After" id="doorAfterImg">
-        
-        <h1 class="h1">Cole's Garage Door Service</h1>
-        <p id="heroP">Fort Worth's Premiere Garage Door Installation <br>and Service Provider</p>
-        <button class="contactButton" id="contactButton2">Contact</button>
-      </hero>
-      <div id="contactInfo">
-        <h4 class="h4Contact">(469) 245-9943</h4>
-        <h4 class="h4Contact">colesgaragedoor1@gmail.com</h4>
-        <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
-          <a href="https://www.facebook.com/profile.php?id=61563945673840" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem;"><i class="fab fa-facebook-f"></i></a>
-          <a href="#fab fa-instagram" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem;"><i class="fab fa-instagram"></i></a>
-          <a href="fab fa-xing" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem;"><i class="fab fa-xing"></i></a>
-          <a href="fab fa-linkedin" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem;"><i class="fab fa-linkedin"></i></a>
-        </div>
+<body  style="margin-top: 20px; background:
+radial-gradient(black 15%, transparent 16%) 0 0,
+radial-gradient(black 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color:#282828;
+background-size:16px 16px;">
+  <header>
+    <nav class="nav">
+      <a href="#homeSection" class="logo-link">
+        <img src="img/colesaltlogo.png" alt="Coles Garage Door Logo" id="colesLogo">
+      </a>
+      <div class="off-screen-menu">
+        <ul class="nav-list">
+            <li><a href="#aboutSection">About</a></li>
+            <li><a href="#servicesSection">Services</a></li>
+            <li><a href="#projectsSection">Projects</a></li>
+            <li><a href="#contactUsSection" class="contact-btn">Contact</a></li>
+        </ul>
       </div>
-    </header>
-  </section>
-  <section class="section" id="aboutSection">
-    <div id="aboutBG">
-      <h4 class="h4">About Cole's</h4>
-      <h2 class="h2">Fast, Friendly, Cost Effective</h2>
-      <p class="paratype1">
-        At Cole's Garage Door Service, we pride ourselves on delivering top-quality garage door solutions to the Fort Worth community. With years of experience, our team specializes in both residential and commercial garage door installations, repairs, and maintenance. We are committed to offering reliable, efficient, and affordable services that ensure your doors operate smoothly and securely. Whether you're looking for a new garage door or need prompt repairs, our skilled technicians are here to help. At Cole’s, customer satisfaction is our top priority, and we strive to exceed your expectations with every job.</p>
-    </div>
-    <div id="aboutImgWrap">
-      <img id="aboutImg" src="img/coles5.jpeg">
-      <div id="aboutImgText">
-        <h5 class="h5">Chris Cole: Owner</h5>
-      </div>
-    </div>
-  </section>
-  <section class="section" id="servicesSection">
-    <div id="servicesLeftDiv">
-      <h4 class="h4">Our Services</h4>
-      <h2 class="h2">Keep Your Garage Doors Rolling Smoothly</h2>
-      <img id="servicesImg" src="img/coles4.jpeg">
-      <div class="serviceCard"><p class="paratype2">Professional garage door installation.</p></div>
-      <div class="serviceCard"><p class="paratype2">Reliable garage door service.</p></div>
-    </div>
-    <div id="servicesRightDiv">
-      <p class="paratype1">At Cole's Garage Door Service, we offer expert garage door installation, cable repair, section replacement, and spring replacement to keep your doors running smoothly. With our emergency services, we're ready to assist when you need us most. Trust us for fast, reliable solutions that prioritize your safety and convenience!</p>
-        <div id="servicesRightDiv2">
-          <p class="paratype2">"I highly recommend them for any garage door repairs or installations."<br><br>-Michael</p>
-        
-        </div>
-      <div class="serviceCard"><p class="paratype2">Expert spring & cable replacement.</p></div>
-      <div class="serviceCard"><p class="paratype2">Door Openers, Cables, Sections, Remotes!</p></div>
-    </div>
-    
-    
-  </section>
-  <section class="section" id="projectsSection">
-    <div class="projectsImgWrap"><img src="img/garagedoor.png"><h1 class="h1">Project <br>1</br></h1></div>
-    <div class="projectsImgWrap"><img src="img/garagedoor.png"><h1 class="h1">Project <br>2</br></h1></div>
-    <div class="projectsImgWrap"><img src="img/garagedoor.png"><h1 class="h1">Project <br>3</br></h1></div>
-  </section>
-  <section class="section" id="contactUsSection">
-    <h4 class="h4">Contact Us</h4>
-    <div id="contactLeftDiv">
-      <div id="contactLeftDiv2">
-        <p class="paratype2">Complete the form, and we’ll get back to you faster than you can say ‘garage door'.</p>
-      </div>
-      <p class="paratype1"></p>
-    </div>
-    <div id="contactRightImgWrap">
-      <form id="contactForm">
-        <input id="input1" type="text" id="name" name="name" placeholder="Your Name" required style="font-family: Familjen Grotesk; font-size: 1.1rem;">
-        <input id="input2" type="email" id="email" name="email" placeholder="Your Email" required style="font-family: Familjen Grotesk; font-size: 1.1rem;">
-        <textarea id="textarea" id="message" name="message" placeholder="Your Message" required style="font-family: Familjen Grotesk; font-size: 1.1rem;"></textarea>
-        <div id="radioGroup" style="background-color: #eb7813c; border-radius: 10px; padding: 20px; margin-bottom: 25px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: absolute;
-        top: 27rem; left:2rem;">
-          <p style="font-weight: bold; margin-bottom: 15px; color: #333; font-family: Familjen Grotesk;">How did you hear about us?</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-            <label style="display: flex; align-items: center; cursor: pointer; padding: 8px 15px; background-color: #fff; border-radius: 20px; transition: all 0.3s ease;">
-              <input type="radio" name="hearAboutUs" value="search" required style="margin: 8px 15px; appearance: none; width: 18px; height: 18px; border: 2px solid #eb7813; border-radius: 50%; outline: none; transition: all 0.3s ease;">
-              <span style="position: relative; font-family: Familjen Grotesk;">Search Engine</span>
-            </label>
-            <label style="display: flex; align-items: center; cursor: pointer; padding: 8px 15px; background-color: #fff; border-radius: 20px; transition: all 0.3s ease;">
-              <input type="radio" name="hearAboutUs" value="social" style="margin: 8px 15px; appearance: none; width: 18px; height: 18px; border: 2px solid #eb7813; border-radius: 50%; outline: none; transition: all 0.3s ease;">
-              <span style="position: relative; font-family: Familjen Grotesk;">Social Media</span>
-            </label>
-            <label style="display: flex; align-items: center; cursor: pointer; padding: 8px 15px; background-color: #fff; border-radius: 20px; transition: all 0.3s ease;">
-              <input type="radio" name="hearAboutUs" value="referral" style="margin: 8px 15px; appearance: none; width: 18px; height: 18px; border: 2px solid #eb7813; border-radius: 50%; outline: none; transition: all 0.3s ease;">
-              <span style="position: relative; font-family: Familjen Grotesk;">Referral</span>
-            </label>
-            <label style="display: flex; align-items: center; cursor: pointer; padding: 8px 15px; background-color: #fff; border-radius: 20px; transition: all 0.3s ease;">
-              <input type="radio" name="hearAboutUs" value="other" style="margin: 8px 15px; appearance: none; width: 18px; height: 18px; border: 2px solid #eb7813; border-radius: 50%; outline: none; transition: all 0.3s ease;">
-              <span style="position: relative; font-family: Familjen Grotesk;">Other</span>
-            </label>
-          </div>
-        </div>
-        <button id="btnForm" type="submit">Send</button>
-      </form>
-      
-    </div>
-  </section>
-  <section class="section" id="footerSection">
-    <footer class="footer" style="background-color: #524f4d; color: #D9D9D9; padding: 2rem 0; font-family: 'Familjen Grotesk', sans-serif; font-size: 1.6rem;">
-      <div class="footer-content" style="display: flex; justify-content: space-evenly; flex-wrap: wrap; max-width: 75vw; margin: 0 auto;">
-        <div class="footer-logo" style="flex: 1 1 200px; margin-bottom: 1rem; padding-right: 8rem;">
-          <img id ="footerLogo" src="img/colesaltlogo.png" alt="Cole's Garage Door Logo" style="max-width: 300px;">
-          
-        </div>
-        <div class="footer-contact" style="flex: 1 1 200px; margin-bottom: 1rem; padding-right: 5rem;">
-          <h3 style="color: #eb7813; font-family: 'Russo One', sans-serif; margin-bottom: 0.5rem; font-size: 1.3rem;">Contact Us</h3>
-          
-          <p style="margin: 0.25rem 0;">(469) 245-9943</p>
-          <p style="margin: 0.25rem 0;">colesgaragedoor1@gmail.com</p>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars">
+            
+        </i>
+      </button>
+      <ul class="nav-list">
+        <li><a href="#aboutSection">About</a></li>
+        <li><a href="#servicesSection">Services</a></li>
+        <li><a href="#projectsSection">Projects</a></li>
+        <li><a href="#contactUsSection" class="cta-button">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        </div>
-        <div class="footer-links" style="flex: 1 1 200px; margin-bottom: 1rem;">
-          <h3 style="color: #eb7813; font-family: 'Russo One', sans-serif; margin-bottom: 0.5rem; font-size: 1.3rem;">Quick Links</h3>
-          <ul style="list-style-type: none; padding: 0;">
-            <li><a href="#aboutSection" style="color: #D9D9D9; text-decoration: none; margin: 0.25rem 0; display: inline-block;">About Us</a></li>
-            <li><a href="#servicesSection" style="color: #D9D9D9; text-decoration: none; margin: 0.25rem 0; display: inline-block;">Services</a></li>
-            <li><a href="#projectsSection" style="color: #D9D9D9; text-decoration: none; margin: 0.25rem 0; display: inline-block;">Projects</a></li>
-            <li><a href="#contactUsSection" style="color: #D9D9D9; text-decoration: none; margin: 0.25rem 0; display: inline-block;">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-social" style="flex: 1 1 200px; margin-bottom: 1rem;">
-          <h3 style="color: #eb7813; font-family: 'Russo One', sans-serif; margin-bottom: 0.5rem; font-size: 1.3rem;">Follow Us</h3>
-          <a href="https://www.facebook.com/profile.php?id=61563945673840" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem; margin-right: 1rem;"><i class="fab fa-facebook-f"></i></a>
-          <a href="#fab fa-instagram" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem; margin-right: 1rem;"><i class="fab fa-instagram"></i></a>
-          <a href="fab fa-xing" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem;"><i class="fab fa-xing"></i></a>
-          <a href="fab fa-linkedin" class="social-icon" style="color: #D9D9D9; font-size: 1.8rem;"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <canvas id="canvas1"></canvas>
+  <main>
+    <section id="homeSection" class="hero">
+      <div class="hero-content">
+        <h1 class="h1">Cole's Garage Door Service</h1>
+        <p id="heroP">Fort Worth Texas & Central Valley California's Premiere Garage Door Installation and Service Provider</p>
+        <a href="#contactUsSection" class="cta-button">Contact Us</a>
       </div>
-      <div class="footer-bottom" style="text-align: center; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #666;">
-        <p style="margin: 0; font-size: 1rem;">&copy; 2023 Cole's Garage Door. All rights reserved.</p>
+      <div class="hero-image">
+        <img src="img/doorafter.jpeg" alt="Door After" id="doorAfterImg" style="border-radius: 10px; box-shadow: 5px 5px 10px rgba(153, 88, 4, 0.89);">
       </div>
+      <div class="contact-info">
+        <p>(469) 245-9943</p>
+        <p>colesgaragedoor1@gmail.com</p>
+        <div class="social-icons">
+          <a style="padding-right: 20px;" href="https://www.facebook.com/profile.php?id=61563945673840" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a style="padding-right: 20px;" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a style="padding-right: 20px;" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a style="padding-right: 20px;" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="aboutSection" class="about">
+      <h2>About Cole's</h2>
+      <h3>Fast, Friendly, Cost Effective</h3>
+      <p id="aboutP">At Cole's Garage Door Service, we pride ourselves on delivering top-quality garage door solutions to the Fort Worth community. With years of experience, our team specializes in both residential and commercial garage door installations, repairs, and maintenance. We are committed to offering reliable, efficient, and affordable services that ensure your doors operate smoothly and securely.</p>
+      <div class="about-image">
+        <img src="img/coles5.jpeg" alt="Chris Cole: Owner" style="border-radius: 10px; box-shadow: 5px 5px 10px rgba(153, 88, 4, 0.89);">
+        <p id="ownerP">Chris Cole: Owner</p>
+      </div>
+    </section>
+
+    <section id="servicesSection" class="services">
+        
+      <h2>Our Services</h2>
       
-    
-    </footer>
-  </section>
+      
+      <div class="services-grid">
+        
+        <div class="service-card" style="margin-top: 20px; background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+        background-color:#282828;
+        background-size:16px 16px;">
+          
+          <h3>Professional garage door installation.</h3>
+          <p>We install all types of garage doors, including wood, steel, and aluminum. We also offer a wide range of garage door styles and finishes to match your home's architecture.</p>
+          
+        </div>
+        <div class="service-card" style="margin-top: 20px; background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+        background-color:#282828;
+        background-size:16px 16px;">
+          <h3>Reliable garage door service.</h3>
+          <p>Our team is trained to handle all types of garage door repairs, including broken springs, cables, and sections. We also offer emergency services to get your door back up and running quickly.</p>
+          
+        </div>
+        <div class="service-card" style="margin-top: 20px; background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+        background-color:#282828;
+        background-size:16px 16px;">
+          <h3>Expert spring & cable replacement.</h3>
+          <p>We replace all types of garage door springs and cables, including torsion and extension springs. We also offer a wide range of replacement parts to ensure your door operates smoothly.</p>
+          
+        </div>
+        <div class="service-card" style="margin-top: 20px; background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+        background-color:#282828;
+        background-size:16px 16px;">
+          <h3>Door Openers, Cables, Sections, Remotes!</h3>
+          <p>Our team specializes in replacing various types of garage door openers, cables, sections, and remotes. Additionally, we provide a diverse selection of replacement parts to guarantee your door functions efficiently.</p>
+          
+        </div>
+      </div>
+      <blockquote>
+        <p id="quoteP">"I highly recommend them for any garage door repairs or installations."</p>
+        <cite>- Michael</cite>
+      </blockquote>
+      
+    </section>
+
+    <section id="projectsSection" class="projects">
+      <h2>Our Projects</h2>
+      <div class="project-grid">
+        <div class="project-card" style="background-image: url('https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/458662603_1393576298713470_1982371018428590965_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=eWoWDsexiiwQ7kNvgEWmS_Z&_nc_ht=scontent-dfw5-1.xx&_nc_gid=Ak5Gxn33u2LLl73E-IVS3f1&oh=00_AYAiiG9JNMnUZkuVnWd1A8qzAHHW7mTDaUf2teIISg_wIQ&oe=66FB3170'); background-size: cover; background-repeat: no-repeat; background-position: center 35%; ">
+          
+          <h3>Garage Door Got You Sittin' Sideways?</h3>
+          <p>Call Chris (469) 245-9943</p>
+        </div>
+        <div class="project-card" style="background-image: url('https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/461165358_1406941784043588_3636149023968136092_n.jpg?stp=cp6_dst-jpg&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ZSvUJi25sw0Q7kNvgHRI4R6&_nc_ht=scontent-dfw5-1.xx&_nc_gid=AJ7Gm_c5QWMYs5La27pcjNs&oh=00_AYAcEuB9Gw9nwFvbljQKDCC7Uwk5JkYlYFT53OGwbkUr2g&oe=66FB54BE'); background-size: cover; background-repeat: no-repeat; background-position: center 45%;">
+          
+          <h3>Burnt out with garage door issues?</h3>
+          <p>Call Chris (469) 245-9943</p>
+        </div>
+        <div class="project-card" style="background-image: url('https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/458290469_122114404040464855_1668677916369581252_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=r9iEhNSG2CgQ7kNvgF4Drfz&_nc_ht=scontent-dfw5-1.xx&_nc_gid=AuG-KqnfpWq8VLwhCNAZd6J&oh=00_AYDDndptWYPudZfhJ7MH7aFAclLawWHNm1GRTrNwaPUeEg&oe=66FB3B3E'); background-size: cover; background-repeat: no-repeat; background-position: center 55%;">
+          
+          <h3>Is your garage door running like a drunk track star?</h3>
+          <p>Call Chris (469) 245-9943</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contactUsSection" class="contact">
+      <h2>Contact Us</h2>
+      <p id="contactP">Complete the form, and we'll get back to you faster than you can say 'garage door'.</p>
+      <form id="contactForm">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <fieldset>
+          <legend>How did you hear about us?</legend>
+          <label><input class="btnInput" type="radio" name="hearAboutUs" value="search" required> Search Engine</label>
+          <label><input class="btnInput" type="radio" name="hearAboutUs" value="social"> Social Media</label>
+          <label><input class="btnInput" type="radio" name="hearAboutUs" value="referral"> Referral</label>
+          <label><input class="btnInput" type="radio" name="hearAboutUs" value="other"> Other</label>
+        </fieldset>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="img/colesaltlogo.png" alt="Cole's Garage Door Logo">
+      </div>
+      <div class="footer-contact">
+        <h2>Contact Us</h2>
+        <p class="footerP">(469) 245-9943</p>
+        <p class="footerP">colesgaragedoor1@gmail.com</p>
+      </div>
+      <nav class="footer-links">
+        <h2>Quick Links</h2>
+        <ul id="footerUl">
+          <li class="footerLi"><a class="footerA" href="#aboutSection">About Us</a></li>
+          <li class="footerLi"><a class="footerA" href="#servicesSection">Services</a></li>
+          <li class="footerLi"><a class="footerA" href="#projectsSection">Projects</a></li>
+          <li class="footerLi"><a class="footerA" href="#contactUsSection">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <h2>Follow Us</h2>
+        <a style="padding-right: 20px;" href="https://www.facebook.com/profile.php?id=61563945673840" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a style="padding-right: 20px;" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a style="padding-right: 20px;" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a style="padding-right: 20px;" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footerP">&copy; 2023 Cole's Garage Door. All rights reserved.</p>
+    </div>
+    <a href="https://strongbow.media/"><img src="img/strongbowBwhite.png" id="footerLogo" alt="Strongbow Media Logo"></a>
+  </footer>
+  <script src="controllers.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
