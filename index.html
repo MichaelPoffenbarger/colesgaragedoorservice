@@ -58,19 +58,17 @@ background-size:16px 16px;">
       <a href="#homeSection" class="logo-link">
         <img src="img/colesaltlogo.png" alt="Coles Garage Door Logo" id="colesLogo">
       </a>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
       <div class="off-screen-menu">
         <ul class="nav-list">
-            <li><a href="#aboutSection">About</a></li>
-            <li><a href="#servicesSection">Services</a></li>
-            <li><a href="#projectsSection">Projects</a></li>
-            <li><a href="#contactUsSection" class="contact-btn">Contact</a></li>
+          <li><a href="#aboutSection">About</a></li>
+          <li><a href="#servicesSection">Services</a></li>
+          <li><a href="#projectsSection">Projects</a></li>
+          <li><a href="#contactUsSection" class="contact-btn">Contact</a></li>
         </ul>
       </div>
-      <button class="menu-toggle" aria-label="Toggle menu">
-        <i class="fas fa-bars">
-            
-        </i>
-      </button>
       <ul class="nav-list">
         <li><a href="#aboutSection">About</a></li>
         <li><a href="#servicesSection">Services</a></li>
@@ -198,6 +196,7 @@ background-size:16px 16px;">
         <h2>Contact Us</h2>
         <p class="footerP">(469) 245-9943</p>
         <p class="footerP">colesgaragedoor1@gmail.com</p>
+        <p class="footerP">Fort Worth, Texas</p>
       </div>
       <nav class="footer-links">
         <h2>Quick Links</h2>
@@ -223,5 +222,12 @@ background-size:16px 16px;">
   </footer>
   <script src="controllers.js"></script>
   <script src="script.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.menu-toggle').click(function() {
+        $('.off-screen-menu').toggle(); // Toggle visibility of the menu
+      });
+    });
+  </script>
 </body>
 </html>
