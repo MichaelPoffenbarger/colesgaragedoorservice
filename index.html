@@ -3,6 +3,8 @@
 <head>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Cole's Garage Door Service offers fast, friendly, and cost-effective garage door installation and repair in Fort Worth. 24/7 emergency services for residential and commercial needs. Call (469) 245-9943 today!">
@@ -22,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Russo+One&display=swap" rel="stylesheet">
-  <title>Cole's Garage Door Service | Fort Worth's Premier Garage Door Installation & Repair</title>
+  <title>Cole's Garage Door Service | Fort Worth's Premiere Garage Door Installation & Repair</title>
   <link rel="canonical" href="https://www.cgds.us">
   <script type="application/ld+json">
   {
@@ -47,14 +49,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preload" href="img/doorafter.webp" as="image">
 </head>
-<body  style="margin-top: 20px; background:
+<body class="container-fluid" style="margin-top: 20px; background:
 radial-gradient(black 15%, transparent 16%) 0 0,
 radial-gradient(black 15%, transparent 16%) 8px 8px,
 radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
 radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
 background-color:#282828;
 background-size:16px 16px;">
-  <header>
+  <header class="container">
     <nav class="nav">
       <a href="#homeSection" class="logo-link">
         <img src="img/colesaltlogo.png" alt="Coles Garage Door Logo" id="colesLogo">
@@ -79,7 +81,7 @@ background-size:16px 16px;">
     </nav>
   </header>
 
-  <main>
+  <main class="container">
     <section id="homeSection" class="hero">
       <div class="hero-content">
         <h1 class="h1">Cole's Garage Door Service</h1>
@@ -104,7 +106,7 @@ background-size:16px 16px;">
 
     <section id="aboutSection" class="about">
       <h2>About Cole's</h2>
-      <h3>Fast, Friendly, Cost Effective</h3>
+      
       <p id="aboutP">At Cole's Garage Door Service, we pride ourselves on delivering top-quality garage door solutions to the Fort Worth community. With years of experience, our team specializes in both residential and commercial garage door installations, repairs, and maintenance. We are committed to offering reliable, efficient, and affordable services that ensure your doors operate smoothly and securely.</p>
       <div class="about-image">
         <img src="img/coles5.webp" alt="Chris Cole: Owner" style="border-radius: 10px; box-shadow: 5px 5px 10px rgba(153, 88, 4, 0.89);">
@@ -116,29 +118,32 @@ background-size:16px 16px;">
         
       <h2>Our Services</h2>
       
-      
-      <div class="services-grid">
-        
-        <div class="service-card" style="margin-top: 20px; background-image: url('img/mesh-gradient\ \(8\).webp');">
-          
-          <h3>Professional garage door installation.</h3>
-          <p>We install all types of garage doors, including wood, steel, and aluminum. We also offer a wide range of garage door styles and finishes to match your home's architecture.</p>
-          
-        </div>
-        <div class="service-card" style="margin-top: 20px; background-image: url('img/mesh-gradient\ \(8\).webp');">
-          <h3>Reliable garage door service.</h3>
-          <p>Our team is trained to handle all types of garage door repairs, including broken springs, cables, and sections. We also offer emergency services to get your door back up and running quickly.</p>
-          
-        </div>
-        <div class="service-card" style="margin-top: 20px; background-image: url('img/mesh-gradient\ \(8\).webp');">
-          <h3>Expert spring & cable replacement.</h3>
-          <p>We replace all types of garage door springs and cables, including torsion and extension springs. We also offer a wide range of replacement parts to ensure your door operates smoothly.</p>
-          
-        </div>
-        <div class="service-card" style="margin-top: 20px; background-image: url('img/mesh-gradient\ \(8\).webp');">
-          <h3>Door Openers, Cables, Sections, Remotes!</h3>
-          <p>Our team specializes in replacing various types of garage door openers, cables, sections, and remotes. Additionally, we provide a diverse selection of replacement parts to guarantee your door functions efficiently.</p>
-          
+      <div class="services-grid-container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="service-card" style="margin-top: 20px; background-image: url('img/mesh-gradient\ \(8\).webp');">
+              <h3 style="margin-bottom: 10px;">Professional garage door installation.</h3>
+              <p>We install all types of garage doors, including wood, steel, and aluminum. We also offer a wide range of garage door styles and finishes to match your home's architecture.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="service-card" style="margin-top: 20px; background-image: url('img/mesh-gradient\ \(8\).webp');">
+              <h3 style="margin-bottom: 10px;">Reliable garage door service.</h3>
+              <p>Our team is trained to handle all types of garage door repairs, including broken springs, cables, and sections. We also offer emergency services to get your door back up and running quickly.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="service-card" style="margin-top: 20px; background-image: url('img/mesh-gradient\ \(8\).webp');">
+              <h3 style="margin-bottom: 10px;">Expert spring & cable replacement.</h3>
+              <p>We replace all types of garage door springs and cables, including torsion and extension springs. We also offer a wide range of replacement parts to ensure your door operates smoothly.</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="service-card" style="margin-top: 20px; background-image: url('img/mesh-gradient\ \(8\).webp');">
+              <h3 style="margin-bottom: 10px;">Door Openers, Cables, Sections, Remotes!</h3>
+              <p>Our team specializes in replacing various types of garage door openers, cables, sections, and remotes. Additionally, we provide a diverse selection of replacement parts to guarantee your door functions efficiently.</p>
+            </div>
+          </div>
         </div>
       </div>
       <blockquote>
@@ -188,7 +193,7 @@ background-size:16px 16px;">
     </section>
   </main>
 
-  <footer>
+  <footer class="container-fluid">
     <div class="footer-content">
       <div class="footer-logo">
         <img src="img/colesaltlogo.webp" alt="Cole's Garage Door Logo">
