@@ -532,16 +532,7 @@
         margin: 1rem 4rem;
     }
     
-    .services-grid, .project-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: space-evenly; 
-        align-items: center;
-        margin-top: 8rem;
-        
-        gap: 5rem;
-        width: 100%;
-    }
+    
     
     .service-card, .project-card {
         margin-top: 1rem;
@@ -900,12 +891,7 @@
         color: #FF8533;
     }
 
-    h3 {
-        font-family: 'familjen grotesk';
-        font-size: 2.2rem;
-        text-align: center;
-        color: #fff;
-    }
+    
 
     #aboutP {
         font-family: 'familjen grotesk';
@@ -923,12 +909,14 @@
         margin: 1rem 4rem;
     }
 
-   
-    
-    .services-grid, .project-grid {
-        grid-template-columns: 1fr;
-        margin-left: 1rem;
+    .services-grid-container .col-md-4 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+       
     }
+    
+    
     
     .service-card, .project-card {
         margin-bottom: 1rem;
@@ -939,7 +927,8 @@
         backdrop-filter: blur(10px);
         border-radius: 10px;
         height: 400px;
-        
+        display: flex;
+        flex-direction: column;
         box-shadow: 0 4px 6px rgba(190, 102, 0, 0.849);
         
         transition: all 0.3s ease;
@@ -959,15 +948,15 @@
         padding-left: 2rem;
         text-align: left;
         color: #ffffff;
-        
+        width: 90%;
         line-height: 1;
         font-size: 1.8rem;
-        margin-top: 1rem;
+        
         
     }
 
     .service-card p {
-        width:50%;
+        width:70%;
         margin-left: 0;
         padding-left: 2rem;
         text-align: left;
@@ -977,52 +966,22 @@
         font-size: 1.2rem;
     }
 
-     #canvas1 {
-        position: relative;
-        top: -2rem;
-
-        z-index: 0; 
-        height: 50%;
-        width: 100%;
-    }
-    #canvas2 {
-        position: relative;
-        top: -2rem;
-
-        z-index: 0; 
-        height: 50%;
-        width: 100%;
-    }
-    .project-card h3 {
-        font-family: 'familjen grotesk';
-        width: inherit;
-        margin-left: 0;
-        padding-left: 2rem;
+    .headline {
         text-align: left;
-        color: #ffffff;
-        backdrop-filter: blur(10px);
-        line-height: 1;
-        font-size: 1.6rem;
-        margin-top: 2rem;
-        padding-top: 2rem;
-        background-color: rgba(31, 31, 31, 0.4);
-        padding-bottom: 1rem;
-        margin-bottom: 0;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
-
-    .project-card p {
-        width: 60%;
-        margin-left: 0;
-        padding-left: 2rem;
+    .subheadline {
+        font-size: 1.2rem;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         text-align: left;
-        color: #ffffff;
-        backdrop-filter: blur(10px);
-        line-height: 1;
-        font-size: 1.3rem;
-        margin-top:0rem;
-        padding-top: 1rem;
-        background-color: rgba(31, 31, 31, 0.4);
     }
+     
+    
+
+    
 
     #quoteP {
         font-family: 'familjen grotesk';
