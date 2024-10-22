@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cole's Garage Door Service offers fast, friendly, and cost-effective garage door installation and repair in Fort Worth. 24/7 emergency services for residential and commercial needs. Call (469) 245-9943 today!">
+    <meta name="keywords" content="garage door, installation, repair, Fort Worth, residential, commercial, spring replacement, cable repair, garage door opener, emergency service, 24/7 service, garage door maintenance">
+    <meta name="author" content="Cole's Garage Door Service">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Cole's Garage Door Service | Fort Worth's Premier Garage Door Installation & Repair | Garage Door Repair Fort Worth | Garage Door Installation Fort Worth | Garage Door Maintenance Fort Worth | Garage Door Service Fort Worth">
+    <meta property="og:description" content="Fast, friendly, and cost-effective garage door services for residential and commercial needs in Fort Worth. Expert installation, repair, and maintenance.">
+    <meta property="og:image" content="img/colesaltlogo.png">
+    <meta property="og:url" content="https://www.cgds.us">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cole's Garage Door Service | Fort Worth's Premier Garage Door Solutions">
+    <meta name="twitter:description" content="Expert garage door installation, repair, and maintenance in Fort Worth. Fast, reliable, and affordable services for all your garage door needs.">
+    <meta name="twitter:image" content="img/colesaltlogo.png">
+    <title>Cole's Garage Door Service | Fort Worth's Premier Garage Door Solutions</title>
+    <meta name="description" content="Cole's Garage Door Service offers fast, friendly, and cost-effective garage door installation and repair in Fort Worth. 24/7 emergency services for residential and commercial needs. Call (469) 245-9943 today!">
+    <meta name="keywords" content="garage door, installation, repair, Fort Worth, residential, commercial, spring replacement, cable repair, garage door opener, emergency service, 24/7 service, garage door maintenance">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Familjen+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF8533;
+            --secondary-color: #1a1a1a;
+            --text-color: #ffffff;
+        }
+        body {
+            font-family: 'Familjen Grotesk', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .navbar-brand img {
+            max-height: 100px;
+        }
+        .nav-link {
+            color: var(--text-color) !important;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        .hero {
+            background-image: url('img/meshgrade1.png');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+        .cta-button {
+            background-color: var(--primary-color);
+            color: #000000;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #FF6600;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(255, 133, 51, 0.3);
+        }
+        .service-card, .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .service-card:hover, .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 133, 51, 0.1);
+        }
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+        }
+        .contact-form input, .contact-form textarea {
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-color);
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 50px 0 20px;
+        }
+        .social-icon {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icon:hover {
+            color: var(--primary-color);
+        }
+        @media (min-width: 1400px) {
+            .container {
+                max-width: 1320px;
+            }
+        }
+        @media (min-width: 992px) {
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+            .hero-content p {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="img/colesaltlogo.png" alt="Cole's Garage Door Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link cta-button ms-lg-3" href="tel:+14692459943">Call Now: (469) 245-9943</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center hero-content">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4" style="color: var(--primary-color); font-size: 5rem;">Cole's Garage Door Services</h1>
+                    <p class="lead mb-4" style="font-weight: 100;">Fast, reliable, and affordable garage door solutions for residential and commercial needs. Available 24/7 for emergencies. Serving Fort Worth, Texas as well as Central Valley, California.</p>
+                    <a href="#contact" class="cta-button btn btn-lg">Get a Free Quote</a>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <img src="img/doorafter.webp" alt="High-quality garage door installation" class="img-fluid rounded-3 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Our Expert Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card text-left">
+                        <i class="fas fa-tools service-icon"></i>
+                        <h3 class="h4 mb-3">Expert Garage Door Repairs – Fast, Reliable, and Hassle-Free</h3>
+                        <p>Get your garage door back in top shape quickly with our professional repair services. We specialize in:</p>
+                        <p><i class="fas fa-check text-primary me-2"></i>Spring Replacements – Safe and efficient replacement of broken or worn-out springs to restore smooth operation.</p>
+                        <p><i class="fas fa-check text-primary me-2"></i>Cable Repairs – Fix frayed or snapped cables to ensure reliable lifting and lowering of your garage door.</p>
+                        <p><i class="fas fa-check text-primary me-2"></i>Opener Troubleshooting – Diagnose and repair opener issues, from malfunctioning remotes to motor problems.</p>
+                        <p>Whether it’s a minor fix or a major repair, our experienced team ensures fast, long-lasting results to keep your garage door running smoothly.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-left">
+                        <i class="fas fa-door-open service-icon"></i>
+                        <h3 class="h4 mb-3">Seamless New Door Installation – Tailored to Your Style</h3>
+                        <p>Upgrade your home with expertly installed garage doors that combine durability and style. We offer:</p>
+                        <p><i class="fas fa-check text-primary me-2"></i>Custom Fit for Your Home – Precision installation of doors designed to match your home’s architecture and personal taste.</p>
+                        <p><i class="fas fa-check text-primary me-2"></i>Variety of Designs & Materials – Choose from a wide selection of styles, materials, and finishes, including steel, wood, and modern composite options.</p>
+                        <p><i class="fas fa-check text-primary me-2"></i>Built for Performance & Longevity – Our high-quality doors are not only stylish but engineered for strength, security, and long-lasting performance.</p>
+                        <p>Enhance your curb appeal and enjoy the confidence of a professionally installed garage door that fits your needs perfectly.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-left">
+                        <i class="fas fa-cog service-icon"></i>
+                        <h3 class="h4 mb-3">Garage Door Maintenance & Tune-Ups – Prevent Problems Before They Start</h3>
+                        <p>Keep your garage door running smoothly with our routine maintenance services designed to prevent breakdowns and costly repairs. Our offerings include:</p>
+                        <p><i class="fas fa-check text-primary me-2"></i>Comprehensive Inspections – Thorough check-ups to identify potential issues before they become major problems.</p>
+                        <p><i class="fas fa-check text-primary me-2"></i>Precision Lubrication – Lubrication of all moving parts to ensure quiet, smooth operation and reduce wear.</p>
+                        <p><i class="fas fa-check text-primary me-2"></i>Safety Checks & Adjustments – Regular safety tests and fine-tuning to keep your door in top working condition.</p>
+                        <p>Protect your investment and extend the life of your garage door with proactive maintenance that saves you time and money in the long run.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 bg-dark" >
+        <div class="container" >
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="img/coles5.webp" alt="Chris Cole: Owner" class="img-fluid rounded-3 shadow-lg">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">About Cole's Garage Door Service</h2>
+                    <p class="lead mb-4">Founded by Chris Cole, we've been serving the Fort Worth community with top-notch garage door solutions for over a decade.</p>
+                    <p>Our team of skilled technicians is committed to providing fast, friendly, and reliable service. We take pride in our work and stand behind every installation and repair we perform.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li><i class="fas fa-check text-primary me-2"></i>24/7 Emergency Service</li>
+                        
+                        <li><i class="fas fa-check text-primary me-2"></i>Upfront Pricing, No Hidden Fees</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Satisfaction Guaranteed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">What Our Customers Say</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p class="mb-3">"Cole's Garage Door Service saved the day! They fixed my broken spring in no time. Excellent service and fair pricing."</p>
+                        <strong>- Sarah Johnson</strong>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p class="mb-3">"I'm impressed with the professionalism and quality of work. My new garage door looks fantastic and operates smoothly."</p>
+                        <strong>- Mike Thompson</strong>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p class="mb-3">"Prompt, courteous, and knowledgeable. I highly recommend Cole's for any garage door needs. They're the best in Fort Worth!"</p>
+                        <strong>- Emily Rodriguez</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-dark" style="background-image: url('img/meshgrade1.png'); background-size: cover; background-position: center;">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Get in Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form class="contact-form" id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="tel" class="form-control" placeholder="Your Phone" required>
+                            </div>
+                            <div class="col-md-6">
+                                <select class="form-select" required>
+                                    <option value="" selected disabled>Select Service</option>
+                                    <option value="Repair">Garage Door Repair</option>
+                                    <option value="Installation">New Door Installation</option>
+                                    <option value="Maintenance">Maintenance & Tune-up</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn cta-button w-100">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center text-lg-start">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-uppercase mb-4" style="color: var(--primary-color); font-family: 'Bebas Neue', sans-serif; font-size: 2rem;">Cole's Garage Door Service</h5>
+                    <p>Providing top-quality garage door services in Fort Worth and surrounding areas.</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-uppercase mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#services" class="text-white">Services</a></li>
+                        <li><a href="#about" class="text-white">About Us</a></li>
+                        <li><a href="#testimonials" class="text-white">Testimonials</a></li>
+                        <li><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-uppercase  mb-4">Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-3"></i> Fort Worth, TX</p>
+                    <p><i class="fas fa-phone me-3"></i> (469) 245-9943</p>
+                    <p><i class="fas fa-envelope me-3"></i> colesgaragedoor1@gmail.com</p>
+                    <div class="mt-4">
+                        <a href="#https://www.facebook.com/profile.php?id=61563945673840" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 mt-4" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Cole's Garage Door Service. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for navbar links
+            $('a.nav-link').on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 70
+                    }, 800);
+                }
+            });
+
+            // Add active class to nav items when scrolling
+            $(window).scroll(function() {
+                var scrollDistance = $(window).scrollTop();
+                $('section').each(function(i) {
+                    if ($(this).position().top <= scrollDistance + 72) {
+                        $('.navbar-nav a.active').removeClass('active');
+                        $('.navbar-nav a').eq(i).addClass('active');
+                    }
+                });
+            }).scroll();
+
+            // Form submission
+            $('#contactForm').on('submit', function(e) {
+                e.preventDefault();
+                var formData = $(this).serialize();
+                // Here you would typically send the form data to your server
+                // For this example, we'll just show an alert
+                alert('Thank you for your message. We will get back to you soon!');
+                this.reset();
+            });
+
+            // Add animation to hero section
+            $('.hero-content').css('opacity', '0').css('transform', 'translateY(20px)');
+            setTimeout(function() {
+                $('.hero-content').animate({opacity: 1, transform: 'translateY(0)'}, 1000);
+            }, 500);
+        });
+    </script>
+</body>
+</html>
