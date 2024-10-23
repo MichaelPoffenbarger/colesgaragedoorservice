@@ -253,25 +253,35 @@
     <section id="testimonials" class="py-5">
         <div class="container">
             <h2 class="section-title text-center mb-5">What Our Customers Say</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="mb-3">"Cole's Garage Door Service saved the day! They fixed my broken spring in no time. Excellent service and fair pricing."</p>
-                        <strong>- Sarah Johnson</strong>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-card">
+                            <p class="mb-3">"Cole's Garage Door Service saved the day! They fixed my broken spring in no time. Excellent service and fair pricing."</p>
+                            <strong>- Sarah Johnson</strong>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <p class="mb-3">"I'm impressed with the professionalism and quality of work. My new garage door looks fantastic and operates smoothly."</p>
+                            <strong>- Mike Thompson</strong>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <p class="mb-3">"Prompt, courteous, and knowledgeable. I highly recommend Cole's for any garage door needs. They're the best in Fort Worth!"</p>
+                            <strong>- Emily Rodriguez</strong>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="mb-3">"I'm impressed with the professionalism and quality of work. My new garage door looks fantastic and operates smoothly."</p>
-                        <strong>- Mike Thompson</strong>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card">
-                        <p class="mb-3">"Prompt, courteous, and knowledgeable. I highly recommend Cole's for any garage door needs. They're the best in Fort Worth!"</p>
-                        <strong>- Emily Rodriguez</strong>
-                    </div>
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </section>
